@@ -25,6 +25,6 @@ final class Movie
         public float $ratingAverage,
         public int $ratingNumber,
         public string $cover,
-        public string $trailer,
+        public ?string $trailer,
     ) {}
 }

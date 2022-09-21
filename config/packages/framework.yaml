@@ -17,6 +17,16 @@ framework:
     php_errors:
         log: true
 
+    http_client:
+        scoped_clients:
+            the_movie_db.client:
+                base_uri: '%env(THE_MOVIE_DB_API_URI)%'
+                headers:
+                    Accept: 'application/json'
+                query:
+                    api_key: '%env(THE_MOVIE_DB_API_KEY)%'
+                timeout: 20
+
 when@test:
     framework:
         test: true
