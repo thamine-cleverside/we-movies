@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}We movie{% endblock %}
+
+{% block body %}
+
+    <div class="wrapper">
+{#        {% if bestRatedMovie is defined %}#}
+{#            <div class="best-movie">#}
+{#                <video width="1280" height="720">#}
+{#                    <source src="{{ bestRatedMovie.trailer}}" type="video/mp4">#}
+{#                </video>#}
+{#                <div class="body row align-items-end">#}
+{#                    <div class="col-md-2">#}
+{#                        <img src="{{ bestRatedMovie.cover }}" alt="">#}
+{#                    </div>#}
+{#                    <div class="col-md-10">#}
+{#                        <h2 class="title" id="best-movie-title">{{ bestRatedMovie.title }}</h2>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        {% endif %}#}
+        <div {{ stimulus_controller('movies-list', {
+            moviesUrl : path('_api_/movies.{_format}_get_collection'),
+            gendersUrl: path('_api_/genders.{_format}_get_collection')
+        }) }}>
+        </div>
+    </div>
+{% endblock %}
