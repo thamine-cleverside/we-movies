@@ -38,6 +38,13 @@ services:
         networks:
             - stack
 
+    node:
+        container_name: "node"
+        build:
+            context: ./docker/node
+        volumes:
+            - .:/app
+
     composer:
         container_name: "composer"
         image: composer:2
