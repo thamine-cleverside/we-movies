@@ -3,7 +3,6 @@
 namespace App\Tests\Application\ApiPlatform;
 
 use ApiPlatform\Symfony\Bundle\Test\ApiTestCase;
-use App\Factory\GenderFactory;
 use App\Provider\MovieProvider;
 use App\Provider\TheMovieDbMapper;
 use App\Provider\TheMovieDbProvider;
@@ -13,8 +12,6 @@ use Zenstruck\Foundry\Test\ResetDatabase;
 
 class GendersGetCollectionTest extends ApiTestCase
 {
-    use ResetDatabase;
-
     /**
      * @test
      */

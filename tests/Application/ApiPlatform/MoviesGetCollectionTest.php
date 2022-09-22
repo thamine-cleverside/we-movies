@@ -13,8 +13,6 @@ use Zenstruck\Foundry\Test\ResetDatabase;
 
 class MoviesGetCollectionTest extends ApiTestCase
 {
-    use ResetDatabase, Factories;
-
     /**
      * @test
      */
