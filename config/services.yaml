@@ -27,3 +27,9 @@ services:
     App\Provider\TheMovieDbMapper:
         arguments:
             $theMovieDbMediasUri: '%env(THE_MOVIE_DB_MEDIA_URI)%'
+
+when@test:
+    services:
+        App\Provider\MovieProvider:
+            public: true
+            alias: 'App\Provider\TheMovieDbProvider'
